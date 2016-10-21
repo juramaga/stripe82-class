@@ -1,33 +1,40 @@
-contains SDSS classification compiled from various
-sources in the literature
+== contains SDSS classification compiled from various
+== sources in the literature
+== by James Long
 
-by James Long
-
-
-QUESTIONS / TODO
-- cannot find any articles which found cepheids or miras in sdss stripe 82
-   - is this because they are not there?
-- J195954.01-002031.4 is this another form of RA/DEC
-   - might be useful for matching
+= NOTES:
+- smaller data files are version controlled in data/
+- larger data files must be downloaded
+- see "DATA SOURCES" below for locations of all data sources
+- by running merge.R one can see (via error messages) which files
+  are not version controlled
 
 = merge.R
-  - takes the SDSS catalog (stripe82candidateVar_v1.1.dat) and merges it
-    with classification sources
+  - merges SDSS catalog (stripe82candidateVar_v1.1.dat) with
+    classifications provided by other sources
   - outputs catalog.txt
 
-= AllLCs
-  - SDSS lightcurves downloaded from
-    http://www.astro.washington.edu/users/ivezic/sdss/catalogs/S82variables.html
-  - this data is only necessary as a check on classifictions
+====== DATA SOURCES ======
 
-= stripe82candidateVar_v1.1.dat
-  - SDSS variable source catalog from
+= SDSS STRIPE 82 VARIABLE SOURCE CATALOG (stripe82candidateVar_v1.1.dat)
+  - download here
     http://www.astro.washington.edu/users/ivezic/sdss/catalogs/S82variables.html
   - this is the starting data, has source IDs and quasar classification
   - merge.R merges source classification provided by articles into this data
 
-= apj383813t2_ascii.txt
-  - eclipsing binaries in sdss
-    http://iopscience.iop.org/0004-637X/731/1/17/suppdata/apj383813t2_ascii.txt
+= SDSS VARIABLE SOURCE LIGHT CURVES
+  - download here
+    http://www.astro.washington.edu/users/ivezic/sdss/catalogs/S82variables.html
+  - this data is only necessary as a check on classifictions
+
+= RR LYRAE (apj326724t2_mrt.txt)
+  - http://iopscience.iop.org/0004-637X/708/1/717/suppdata/apj326724t2_mrt.txt  
+  - link to article:
+    http://iopscience.iop.org/article/10.1088/0004-637X/708/1/717/meta
+    
+= ECLIPSING BINARY (apj383813t2_ascii.txt)
+  - http://iopscience.iop.org/0004-637X/731/1/17/suppdata/apj383813t2_ascii.txt
   - link to article
     http://iopscience.iop.org/article/10.1088/0004-637X/731/1/17/meta
+
+
