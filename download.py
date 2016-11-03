@@ -21,7 +21,7 @@ os.makedirs(d)
 ## lightcurves only necessary for visualizing data / checking classifications
 
 ## http://www.astro.washington.edu/users/ivezic/sdss/catalogs/S82variables.html
-
+##http://www.astro.washington.edu/users/ivezic/sdss/catalogs/stripe82candidateVar_v1.1.dat.gz
 
 
 #### STEP 3: DOWNLOAD CLASSIFICATIONS ASSIGNED IN VARIOUS WORKS
@@ -32,6 +32,8 @@ fnames = ["rrlyrae.txt",
 urls = ["http://iopscience.iop.org/0004-637X/708/1/717/suppdata/apj326724t2_mrt.txt",
         "http://iopscience.iop.org/0004-637X/731/1/17/suppdata/apj383813t2_ascii.txt"]
 for ii in range(len(fnames)):
+    print "downloading from: " + urls[ii]
+    print "storing in: " + d + "/" + fnames[ii]
     response = urllib2.urlopen(urls[ii])
     html = response.read()
     f = open(d + "/" + fnames[ii], 'w')
