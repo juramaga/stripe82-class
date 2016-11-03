@@ -1,6 +1,7 @@
 ## downloads all data necessary for creating catalog
 ## by James Long
 import urllib
+import shutil
 import os
 import zipfile
 
@@ -20,9 +21,9 @@ os.makedirs(d)
 ## http://www.astro.washington.edu/users/ivezic/sdss/catalogs/stripe82candidateVar_v1.1.dat.gz
 ## ::: but currently these servers are down so downloading from james long's website :::
 url = "http://www.stat.tamu.edu/~jlong/"
-fnames = ["apj326724t2_mrt.zip","AllLCs.zip"]
+fnames = ["stripe82candidateVar_v1.1.zip","AllLCs.zip"]
 for fname in fnames:
-    print "downloading " + fname + ". . ."
+    print "downloading " + fname + " . . ."
     urllib.urlretrieve(url + fname, d + '/' + fname)
     zip_ref = zipfile.ZipFile(d + '/' + fname, 'r')
     zip_ref.extractall(d)
@@ -38,7 +39,8 @@ fnames = ["rrlyrae.txt",
 urls = ["http://iopscience.iop.org/0004-637X/708/1/717/suppdata/apj326724t2_mrt.txt",
         "http://iopscience.iop.org/0004-637X/731/1/17/suppdata/apj383813t2_ascii.txt"]
 for ii in range(len(fnames)):
-    url = urls[ii] + fnames[ii]
+    url = urls[ii]
     fname = d + "/" + fnames[ii]
     print "downloading from: " + url + ",  storing in:" + fname
     urllib.urlretrieve(url,fname)
+
