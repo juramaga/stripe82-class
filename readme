@@ -2,10 +2,14 @@
 == sources in the literature
 == by James Long
 
-====== FILES ======
-download.py  : downloads all data files
-merge.py     : merges classification from different sources
-               outputs results in catalog.txt
+====== USAGE ======
+## get data
+python download.py
+## merge classifications to create catalog
+python merge.py
+## view catalog
+emacs catalog.txt
+
 
 ====== TODO / QUESTIONS ======
 - cannot find any articles on cepheids or miras in sdss stripe 82
