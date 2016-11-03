@@ -1,3 +1,7 @@
+### input: data/stripe82candidateVar_v1.1.dat
+### output: outfile, same as input but with extra column for classes
+### by James Long
+
 import numpy as np
 import pandas as pd
 import os
