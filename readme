@@ -4,7 +4,7 @@
 
 ====== FILES ======
 download.py  : downloads all data files
-merge.R      : merges classification from different sources
+merge.py     : merges classification from different sources
                outputs results in catalog.txt
 
 ====== TODO / QUESTIONS ======
