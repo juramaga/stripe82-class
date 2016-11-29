@@ -21,15 +21,13 @@ emacs catalog.txt
 ====== CURRENT DATA SOURCES ======
 
 = SDSS STRIPE 82 VARIABLE SOURCE CATALOG (stripe82candidateVar_v1.1.dat)
-  - download here
-    http://www.astro.washington.edu/users/ivezic/sdss/catalogs/S82variables.html
+  - http://www.astro.washington.edu/users/ivezic/sdss/catalogs/S82variables.html
   - this is the starting data, has source IDs and quasar classification
   - merge.R merges source classification provided by articles into this data
 
 = SDSS VARIABLE SOURCE LIGHT CURVES
-  - download here
-    http://www.astro.washington.edu/users/ivezic/sdss/catalogs/S82variables.html
-  - this data is only necessary as a check on classifictions
+  - http://www.astro.washington.edu/users/ivezic/sdss/catalogs/S82variables.html
+  - this data is only necessary as a check on classifications
 
 = RR LYRAE (apj326724t2_mrt.txt)
   - http://iopscience.iop.org/0004-637X/708/1/717/suppdata/apj326724t2_mrt.txt  

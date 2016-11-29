@@ -20,7 +20,8 @@ os.makedirs(d)
 ## http://www.astro.washington.edu/users/ivezic/sdss/catalogs/S82variables.html
 ## http://www.astro.washington.edu/users/ivezic/sdss/catalogs/stripe82candidateVar_v1.1.dat.gz
 ## ::: but currently these servers are down so downloading from james long's website :::
-url = "http://www.stat.tamu.edu/~jlong/"
+url = "http://www.astro.washington.edu/users/ivezic/sdss/catalogs/"
+## url = "http://www.stat.tamu.edu/~jlong/"   ## mirrored here, can try if above link is not working
 fnames = ["stripe82candidateVar_v1.1.zip","AllLCs.zip"]
 for fname in fnames:
     print "downloading " + fname + " . . ."
