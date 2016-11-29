@@ -23,7 +23,7 @@ os.makedirs(d)
 ## only has quasar classifications
 ## lightcurves only necessary for visualizing data / checking classifications
 url = "http://www.astro.washington.edu/users/ivezic/sdss/catalogs/"
-## url = "http://www.stat.tamu.edu/~jlong/"   ## mirrored here, can try if above link is not working
+##url = "http://www.stat.tamu.edu/~jlong/"   ## mirrored here, can try if above link is not working
 ## download and extract catalog
 fname = "stripe82candidateVar_v1.1.dat.gz"
 print "downloading " + fname + " . . ."
@@ -35,7 +35,7 @@ inF.close()
 outF.close()
 ## download and extract lightcurves
 fname = "AllLCs.tar.gz"
-print "downloading " + fname + " . . ."
+print "downloading " + fname + " (will take several minutes) . . ."
 urllib.urlretrieve(url + fname, d + '/' + fname)
 tar = tarfile.open(d + '/' + fname)
 os.makedirs(d + '/' + LCfolder)
