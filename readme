@@ -1,6 +1,6 @@
 == contains SDSS classification compiled from various
 == sources in the literature
-== by James Long
+== mostly tested on python2.7
 
 ====== USAGE ======
 ## get data
