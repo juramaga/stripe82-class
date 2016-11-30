@@ -16,6 +16,8 @@ if os.path.exists(d):
     shutil.rmtree(d)
 
 os.makedirs(d)
+os.makedirs(d + "/train")
+os.makedirs(d + "/test")
 
 
 #### STEP 2: MOVE files into challenge directory
@@ -31,22 +33,23 @@ data = pd.read_table("catalog.txt",sep=" ")
 
 ######## obtain set of training rows
 ## divide data into training and test
-## select 200 RRL and 500 quasars
-to_use = data['cl'] == "QSO"
+## select Nrr RRL and Nq quasars
+Nrr = 200
+Nq = 500
+qso = np.random.permutation(data[data['cl'] == "QSO"].index.tolist())
+qso_train = qsos[:Nq] ## random select Nq qsos for training
+qso_test = qsos[Nq:] ## rest are test
+rr = np.random.permutation(data[data['cl'].str.contains("rr")].index.tolist())
+rr_train = rr[:Nrr] ## random select Nrr rr for training
+rr_test = rr[Nrr:] ## rest are test
+unknown_test = data[data['cl'] == "unknown"].index.tolist() ## all unknowns are test
+train = data.loc[np.concatenate((qso_train,rr_train)),["ID","cl"]]
+test = data.loc[np.concatenate((qso_test,rr_test,unknown_test)),["ID","cl"]]
 
 
-qsos = data[data['cl'] == "QSO"].index.tolist()
-## maybe this function: scipy.stats.rv_discrete
-
-
-
-np.arange(data.shape[0])*to_use
-
-
-dim(data)
-np.sum(to_use)
-
-
+## load, downsample, and move all lcs in train, test
+## write train, test data frames out
+## should probably compute features in a different file
 
 
 #### files and folders in challenge/
