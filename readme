@@ -9,6 +9,8 @@ python download.py
 python merge.py
 ## view catalog
 emacs catalog.txt
+## create challenge from catalog.txt
+python challenge.py
 
 
 ====== TODO / QUESTIONS ======
