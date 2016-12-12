@@ -37,8 +37,8 @@ data = pd.read_table("catalog.txt",sep=" ")
 Nrr = 200
 Nq = 500
 qso = np.random.permutation(data[data['cl'] == "QSO"].index.tolist())
-qso_train = qsos[:Nq] ## random select Nq qsos for training
-qso_test = qsos[Nq:] ## rest are test
+qso_train = qso[:Nq] ## random select Nq qsos for training
+qso_test = qso[Nq:] ## rest are test
 rr = np.random.permutation(data[data['cl'].str.contains("rr")].index.tolist())
 rr_train = rr[:Nrr] ## random select Nrr rr for training
 rr_test = rr[Nrr:] ## rest are test

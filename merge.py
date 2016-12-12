@@ -5,6 +5,9 @@
 import numpy as np
 import pandas as pd
 import os
+from astropy import units as u
+from astropy.coordinates import SkyCoord
+import matplotlib.pyplot as plt
 
 outfile = "catalog.txt"
 try:
@@ -37,7 +40,41 @@ data['cl'][ix] = data['classrr'][ix]
 del data['classrr']
 
 ## TODO: merge eclipsing binary sources
+print "eclipsing binaries . . . "
+eclipsing = pd.read_table("data/eclipsing_binary.txt",header=None,sep="\t",
+                     skiprows=4,skipinitialspace=True)
 
+ra = []
+dec =[]
+for i in np.arange(len(eclipsing[0])):
+    coord = eclipsing[0][i][6:]
+    h = coord[0:2]
+    m = coord[2:4]
+    s = coord[4:9]
+    de = coord[9:12]
+    mi = coord[12:14]
+    se = coord[14:]
+    coordi = h+" "+m+" "+s+" "+de+" "+mi+" "+se
+
+    c = SkyCoord(coordi, unit=(u.hourangle, u.deg))
+    #print c.ra.degree,c.dec.degree
+    ra.append(c.ra.degree)
+    dec.append(c.dec.degree)
+
+c1 = SkyCoord(ra=ra*u.degree, dec=dec*u.degree)
+catalog = SkyCoord(ra=np.array(data['ra'])*u.degree, dec=np.array(data['dec'])*u.degree)
+
+idx, d2d, d3d = c1.match_to_catalog_sky(catalog)
+idy =  np.where(np.log10(d2d.arcsec) < 0)
+
+eclipsing_new = {'ra': np.array(data['ra'])[idx[idy]], 'dec': np.array(data['dec'])[idx[idy]], 'classecl':np.array(eclipsing[4])[idy]}
+eclipsing_new = pd.DataFrame(data=eclipsing_new)
+
+#print eclipsing_new
+data = pd.merge(data,eclipsing_new,on=['ra','dec'],how='left')
+ix = np.invert(pd.isnull(data['classecl']))
+data['cl'][ix] = data['classecl'][ix]
+del data['classecl']
 
 ## output catalog
 print "writing catalog . . ."
