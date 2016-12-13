@@ -48,6 +48,7 @@ ra = []
 dec =[]
 for i in np.arange(len(eclipsing[0])):
     coord = eclipsing[0][i][6:]
+    print i,coord
     h = coord[0:2]
     m = coord[2:4]
     s = coord[4:9]
@@ -55,7 +56,6 @@ for i in np.arange(len(eclipsing[0])):
     mi = coord[12:14]
     se = coord[14:]
     coordi = h+" "+m+" "+s+" "+de+" "+mi+" "+se
-
     c = SkyCoord(coordi, unit=(u.hourangle, u.deg))
     #print c.ra.degree,c.dec.degree
     ra.append(c.ra.degree)
