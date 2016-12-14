@@ -39,10 +39,10 @@ ix = np.invert(pd.isnull(data['classrr']))
 data['cl'][ix] = data['classrr'][ix]
 del data['classrr']
 
-## TODO: merge eclipsing binary sources
 print "eclipsing binaries . . . "
-eclipsing = pd.read_table("data/eclipsing_binary.txt",header=None,sep="\t",
-                     skiprows=4,skipinitialspace=True)
+eclipsing = pd.read_table("data/eclipsing_binary.txt",engine="python",
+                          header=None,sep="\t",
+                          skiprows=4,skipfooter=2,skipinitialspace=True)
 
 ra = []
 dec =[]
