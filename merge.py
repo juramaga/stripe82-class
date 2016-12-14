@@ -48,7 +48,6 @@ ra = []
 dec =[]
 for i in np.arange(len(eclipsing[0])):
     coord = eclipsing[0][i][6:]
-    print i,coord
     h = coord[0:2]
     m = coord[2:4]
     s = coord[4:9]
