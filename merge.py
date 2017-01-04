@@ -77,8 +77,6 @@ del data['classrrhads']
 
 
 ## merge eclipsing binary sources
-=======
->>>>>>> 6c3ed831966d047660cbd6f9dab613e3b23de32b
 print "eclipsing binaries . . . "
 eclipsing = pd.read_table("data/eclipsing_binary.txt",engine="python",
                           header=None,sep="\t",
