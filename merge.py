@@ -39,7 +39,43 @@ ix = np.invert(pd.isnull(data['classrr']))
 data['cl'][ix] = data['classrr'][ix]
 del data['classrr']
 
-## TODO: merge eclipsing binary sources
+## merge high-amplitude delta scuti stars from Suveges et al. 2012
+print "HADS . . . "
+hads = pd.read_table("data/delta_scuti.txt",header=None,sep=" ",
+                     skiprows=75,skipinitialspace=True)
+hads = hads[[1]]
+hads.columns = ["ID"]
+hads['classdscu'] = pd.Series(['del_scu' for x in range(len(hads.index))])
+data = pd.merge(data,hads,on='ID',how='left')
+ix = np.invert(pd.isnull(data['classdscu']))
+data['cl'][ix] = data['classdscu'][ix]
+del data['classdscu']
+
+## merge RR Lyr from Suveges et al. 2012
+print "More RR lyrae . . . "
+rr_suve = pd.read_table("data/more_rrlyrae_suveges.txt",header=None,sep=" ",
+                     skiprows=77,skipinitialspace=True)
+rr_suve = rr_suve[[2,5]]
+rr_suve.columns = ["ID","classrrsuv"]
+rr_suve["ID"] = pd.Series([int(x) for x in rr_suve["ID"]])
+data = pd.merge(data,rr_suve,on='ID',how='left')
+ix = np.invert(pd.isnull(data['classrrsuv']))
+data['cl'][ix] = data['classrrsuv'][ix]
+del data['classrrsuv']
+
+## merge Double-mode RR Lyr, multiperiodic RR Lyrae candidates and multiperiodic HADS delta scuti stars from Suveges et al. 2012
+print "More RR lyrae and HADS . . . "
+rrhads = pd.read_table("data/rrlyrae_suveges.txt",header=None,sep=" ",
+                     skiprows=73,skipinitialspace=True)
+rrhads = rrhads[[1,4]]
+rrhads.columns = ["ID","classrrhads"]
+data = pd.merge(data,rrhads,on='ID',how='left')
+ix = np.invert(pd.isnull(data['classrrhads']))
+data['cl'][ix] = data['classrrhads'][ix]
+del data['classrrhads']
+
+
+## merge eclipsing binary sources
 print "eclipsing binaries . . . "
 eclipsing = pd.read_table("data/eclipsing_binary.txt",header=None,sep="\t",
                      skiprows=4,skipinitialspace=True)
