@@ -39,6 +39,7 @@ ix = np.invert(pd.isnull(data['classrr']))
 data['cl'][ix] = data['classrr'][ix]
 del data['classrr']
 
+<<<<<<< HEAD
 ## merge high-amplitude delta scuti stars from Suveges et al. 2012
 print "HADS . . . "
 hads = pd.read_table("data/delta_scuti.txt",header=None,sep=" ",
@@ -76,9 +77,12 @@ del data['classrrhads']
 
 
 ## merge eclipsing binary sources
+=======
+>>>>>>> 6c3ed831966d047660cbd6f9dab613e3b23de32b
 print "eclipsing binaries . . . "
-eclipsing = pd.read_table("data/eclipsing_binary.txt",header=None,sep="\t",
-                     skiprows=4,skipinitialspace=True)
+eclipsing = pd.read_table("data/eclipsing_binary.txt",engine="python",
+                          header=None,sep="\t",
+                          skiprows=4,skipfooter=2,skipinitialspace=True)
 
 ra = []
 dec =[]
@@ -91,7 +95,6 @@ for i in np.arange(len(eclipsing[0])):
     mi = coord[12:14]
     se = coord[14:]
     coordi = h+" "+m+" "+s+" "+de+" "+mi+" "+se
-
     c = SkyCoord(coordi, unit=(u.hourangle, u.deg))
     #print c.ra.degree,c.dec.degree
     ra.append(c.ra.degree)
