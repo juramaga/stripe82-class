@@ -39,11 +39,9 @@ ix = np.invert(pd.isnull(data['classrr']))
 data['cl'][ix] = data['classrr'][ix]
 del data['classrr']
 
-<<<<<<< HEAD
 ## merge high-amplitude delta scuti stars from Suveges et al. 2012
 print "HADS . . . "
-hads = pd.read_table("data/delta_scuti.txt",header=None,sep=" ",
-                     skiprows=75,skipinitialspace=True)
+hads = pd.read_table("data/delta_scuti.txt",header=None,sep=" ",skiprows=75,skipinitialspace=True)
 hads = hads[[1]]
 hads.columns = ["ID"]
 hads['classdscu'] = pd.Series(['del_scu' for x in range(len(hads.index))])
