@@ -18,8 +18,14 @@ if os.path.exists(d):
 os.makedirs(d)
 
 
+#### STEP 2: COPY FILES FROM data-controlled to data
+loc = "data-controlled"
+fs = os.listdir(loc)
+for f in fs:
+    shutil.copy(loc + "/" + f,d)
 
-#### STEP 2: DOWNLOAD SDSS STRIPE 82 CATALOG AND LIGHTCURVES
+
+#### STEP 3: DOWNLOAD SDSS STRIPE 82 CATALOG AND LIGHTCURVES
 ## only has quasar classifications
 ## lightcurves only necessary for visualizing data / checking classifications
 url = "http://www.astro.washington.edu/users/ivezic/sdss/catalogs/"
@@ -44,7 +50,7 @@ tar.close()
 
 
     
-#### STEP 3: DOWNLOAD CLASSIFICATIONS ASSIGNED IN VARIOUS WORKS
+#### STEP 4: DOWNLOAD CLASSIFICATIONS ASSIGNED IN VARIOUS WORKS
 ## urls    : location of class files
 ## fnames  : list of files names to store different classifications
 ##

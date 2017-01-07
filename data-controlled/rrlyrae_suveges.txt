@@ -1,0 +1,120 @@
+#  
+#   VizieR Astronomical Server vizier.cfa.harvard.edu
+#    Date: 2017-01-04T16:39:55 [V1.99+ (14-Oct-2013)]
+#   In case of problem, please report to: cds-question@unistra.fr
+# 
+#   
+#Coosys J2000: eq_FK5 J2000 
+#INFO votable-version=1.99+ (14-Oct-2013) 
+#INFO -ref=VIZ586d198e5f68 
+#INFO -out.max=unlimited 
+#INFO queryParameters=30 
+#-oc.form=sexa
+#-out.max=unlimited
+#-order=I
+#-out.src=J/MNRAS/424/2528/multiper
+#-nav=cat:J/MNRAS/424/2528&tab:{J/MNRAS/424/2528/multiper}&key:source=J/MNRAS/424/2528/multiper&HTTPPRM:&&-ref=VIZ586d198e5f68&-out.max=unlimited&-out.form=HTML Table&-oc.form=sexa&-c.eq=J2000&-c.r=  2&-c.u=arcmin&-c.geom=r&-order=I&-out=F&-out=ID&-out=RAJ2000&-out=DEJ2000&-out=Type&-out=umag&-out=gmag&-out=rmag&-out=imag&-out=zmag&-out=Fz1&-out=Fr&-out=uAmp&-out=gAmp&-out=rAmp&-out=iAmp&-out=zAmp&-out=DR7&-ignore=DR7=*&DR7=DR7&-out=Simbad&Simbad=Simbad&-file=.&-meta.ucd=2&-meta=1&-meta.foot=1&-usenav=1&-bmark=POST&-out.src=J/MNRAS/424/2528/multiper
+#-c.eq=J2000
+#-c.r=  2
+#-c.u=arcmin
+#-c.geom=r
+#-source=J/MNRAS/424/2528/multiper
+#-order=I
+#-out=F
+#-out=ID
+#-out=RAJ2000
+#-out=DEJ2000
+#-out=Type
+#-out=umag
+#-out=gmag
+#-out=rmag
+#-out=imag
+#-out=zmag
+#-out=Fz1
+#-out=Fr
+#-out=uAmp
+#-out=gAmp
+#-out=rAmp
+#-out=iAmp
+#-out=zAmp
+#-out=DR7
+#-out=Simbad
+#
+
+#RESOURCE=yCat_74242528
+#Name: J/MNRAS/424/2528
+#Title: RR Lyrae in SDSS Stripe 82 (Suveges+, 2012)
+#Table J_MNRAS_424_2528_multiper:
+#Name: J/MNRAS/424/2528/multiper
+#Title: Double-mode RR Lyr, multiperiodic RR Lyrae candidates and multiperiodic HADS stars (tables 3,4,5 and 7)
+#---Details of Columns:
+    F             (A1)    {\bf F} indicates that a figure exists for this star [ucd=meta.ref.url]
+    ID            (I7)    Identification number [ucd=meta.id;meta.main]
+    RAJ2000 (deg) (F10.6) [-90/90] Right ascension (J2000) [ucd=pos.eq.ra;meta.main]
+    DEJ2000 (deg) (F10.6) [-1.3/1.3] Declination (J2000) [ucd=pos.eq.dec;meta.main]
+    Type          (A4)    Variable type (1) [ucd=src.class]
+    umag (mag)    (F5.2)  Mean u magnitude corrected for the interstellar medium extinction [ucd=phot.mag;em.opt.U]
+    gmag (mag)    (F5.2)  Mean g magnitude corrected for the interstellar medium extinction [ucd=phot.mag;em.opt.B]
+    rmag (mag)    (F5.2)  Mean r magnitude corrected for the interstellar medium extinction [ucd=phot.mag;em.opt.R]
+    imag (mag)    (F5.2)  Mean i magnitude corrected for the interstellar medium extinction [ucd=phot.mag;em.opt.I]
+    zmag (mag)    (F5.2)  Mean z magnitude corrected for the interstellar medium extinction [ucd=phot.mag;em.opt.I]
+    Fz1 (d-1)     (F8.5)  Pulsation frequency determined from generalized least-squares period search on PC1 (first direction of the principal component analysis) [ucd=em.freq;src.var]
+    Fr (d-1)      (F8.5)  ? Secondary frequency [ucd=em.freq;src.var]
+    uAmp (mag)    (F5.2)  Amplitude in u-band [ucd=src.var.amplitude]
+    gAmp (mag)    (F5.2)  Amplitude in g-band [ucd=src.var.amplitude]
+    rAmp (mag)    (F5.2)  Amplitude in r-band [ucd=src.var.amplitude]
+    iAmp (mag)    (F5.2)  Amplitude in i-band [ucd=src.var.amplitude]
+    zAmp (mag)    (F5.2)  Amplitude in z-band [ucd=src.var.amplitude]
+    DR7           (A3)    Display the SDSS-DR7 photometric catalog within 3" (Cat. II/294) [ucd=meta.ref.url]
+    Simbad        (a6)    ask the {\bf\fg{FireBrick}Simbad} data-base about this object [ucd=meta.ref.url]
+- ------- ---------- ---------- ---- ----- ----- ----- ----- ----- -------- -------- ----- ----- ----- ----- ----- --- ------
+          RAJ        DEJ             umag  gmag  rmag  imag  zmag  F                 uAmp  gAmp  rAmp  iAmp  zAmp            
+F ID      2000 (deg) 2000 (deg) Type (mag) (mag) (mag) (mag) (mag) z1 (d-1) Fr (d-1) (mag) (mag) (mag) (mag) (mag) DR7 Simbad
+- ------- ---------- ---------- ---- ----- ----- ----- ----- ----- -------- -------- ----- ----- ----- ----- ----- --- ------
+F 1059995 336.394360 -00.056749 RRdm 21.02 19.94 19.75 19.75 19.78  2.48876  1.85620  0.19  0.36  0.27  0.22  0.09 DR7 Simbad
+F 1346981 025.772163 +01.097024 RRdm 18.20 17.09 17.03 17.03 17.04  2.82707  2.10280  0.40  0.43  0.31  0.23  0.20 DR7 Simbad
+F 1638185 030.812051 +01.205761 RRdm 18.05 16.93 16.80 16.80 16.80  2.84693  2.11660  0.48  0.49  0.37  0.31  0.24 DR7 Simbad
+F 1875049 329.099804 +00.941754 RRdm 19.66 18.57 18.50 18.48 18.48  2.41850  1.80320  0.20  0.35  0.24  0.19  0.22 DR7 Simbad
+F 2249641 320.195260 +00.210125 RRdm 17.47 16.38 16.31 16.32 16.34  2.78830  2.07536  0.45  0.48  0.33  0.26  0.22 DR7 Simbad
+F 2662389 315.212551 +00.404872 RRdm 18.22 17.13 17.06 17.08 17.11  2.84001  2.10780  0.38  0.44  0.30  0.24  0.21 DR7 Simbad
+F 2740388 315.788533 -01.202920 RRdm 17.61 16.54 16.47 16.45 16.50  2.76911  2.06080  0.45  0.49  0.34  0.28  0.21 DR7 Simbad
+F 3091639 048.387957 +00.715216 RRdm 19.33 18.24 18.14 18.16 18.19  2.82369  2.09916  0.44  0.55  0.36  0.29  0.23 DR7 Simbad
+F 3182847 311.655284 +00.330749 RRdm 20.53 19.42 19.33 19.36 19.40  2.77071  2.06144  0.38  0.50  0.39  0.28  0.29 DR7 Simbad
+F 3524879 310.614488 -00.480494 RRdm 17.52 16.37 16.28 16.27 16.29  2.42901  1.81232  0.39  0.47  0.32  0.26  0.21 DR7 Simbad
+F 4185977 307.114733 -00.892139 RRdm 15.96 14.84 14.71 14.70 14.75  2.64865  1.97572  0.48  0.53  0.38  0.30  0.26 DR7 Simbad
+F 5631911 302.154835 -00.839656 RRdm 19.85 18.74 18.66 18.57 18.63  2.43680  1.81908  0.49  0.51  0.34  0.27  0.26 DR7 Simbad
+F 1149344 338.241794 +00.077395 RRdm 20.22 19.16 19.03 18.99 18.99  2.40371  2.79388  0.32  0.37  0.25  0.18  0.18 DR7 Simbad
+F 1283137 027.742275 -00.847584 RRdm 19.08 17.92 17.83 17.82 17.84  1.75063  2.04704  0.40  0.48  0.32  0.24  0.22 DR7 Simbad
+F 1139404 -24.140121 +00.369111 RRmf 17.71 16.54 16.54 16.57 16.62  3.63296  3.62848  0.33  0.38  0.28  0.21  0.18 DR7 Simbad
+F 1945634 -31.463604 +01.030967 RRmf 17.50 16.32 16.11 16.01 15.98  1.53242  1.53904  0.52  0.58  0.37  0.27  0.26 DR7 Simbad
+F 2954798 -41.387218 -00.569949 RRmf 18.15 16.95 16.97 17.01 17.06  3.15265  3.15188  0.46  0.53  0.37  0.30  0.23 DR7 Simbad
+F 3261654 -45.603648 +00.149636 RRmf 17.01 15.81 15.83 15.87 15.93  3.68724  3.61116  0.22  0.26  0.18  0.15  0.11 DR7 Simbad
+F 6058913 -58.281094 +01.205592 RRmf 18.29 17.13 17.06 17.08 17.12  2.55444  2.55320  0.48  0.50  0.35  0.30  0.26 DR7 Simbad
+F 6086465 -57.509052 -00.506643 RRmf 18.44 17.26 17.31 17.38 17.43  3.63835  3.71848  0.31  0.32  0.25  0.21  0.22 DR7 Simbad
+F  700313 015.188040 -01.036745 RRmf 17.85 16.72 16.56 16.50 16.51  2.99438           0.51  0.66  0.39  0.30  0.24 DR7 Simbad
+F 1731088 -30.677761 -00.062001 RRmf 20.20 19.14 18.97 18.96 18.95  1.96133           0.87  0.91  0.66  0.51  0.49 DR7 Simbad
+F 3218459 -47.774708 +00.387032 RRu  17.23 16.10 16.13 16.20 16.27  4.48794  3.60676  0.15  0.17  0.12  0.10  0.08 DR7 Simbad
+F 1528004 -29.845729 -00.438433 RRu  18.35 17.19 17.07 17.05 17.08  3.05227  5.03044  0.87  0.92  0.67  0.53  0.46 DR7 Simbad
+F 3252839 -46.822139 -01.190310 RRu  17.83 16.69 16.70 16.75 16.80  3.21292  5.15024  0.35  0.36  0.29  0.20  0.20 DR7 Simbad
+F 4936224 058.031763 +00.502842 mult 17.71 16.81 16.81 16.85 16.94 17.91900 17.91776  0.24  0.27  0.20  0.14  0.13 DR7 Simbad
+F 4433015 -51.994003 +01.211038 mult 19.39 18.37 18.34 18.36 18.38 15.86637 16.06300  0.30  0.26  0.17  0.11  0.13 DR7 Simbad
+F 2816955 -44.450874 +00.835961 mult 16.95 15.95 15.97 16.06 16.14 25.80457 25.15836  0.19  0.22  0.16  0.13  0.11 DR7 Simbad
+F 1113593 -20.457095 -00.775377 mult 17.81 16.74 16.74 16.77 16.86 21.71685 21.04152  0.23  0.29  0.21  0.17  0.14 DR7 Simbad
+F 1741727 -31.076033 -00.079779 mult 20.06 19.01 18.95 18.99 19.05 20.68204 19.11928  0.02  0.17  0.12  0.11  0.10 DR7 Simbad
+F 3642254 -47.102871 +00.553778 mult 17.37 16.30 16.33 16.40 16.47 21.67150 18.67376  0.23  0.30  0.20  0.16  0.15 DR7 Simbad
+F 5401947 -55.894772 +00.624779 mult 16.67 15.60 15.62 15.67 15.78 11.90623  9.89844  0.61  0.67  0.49  0.37  0.33 DR7 Simbad
+F 3269918 -45.136352 -01.230279 mult 18.67 17.63 17.68 17.75 17.84 19.09286 24.45904  0.46  0.49  0.37  0.28  0.24 DR7 Simbad
+F 2196466 -35.874290 -00.357666 mult 19.32 18.30 18.19 18.19 18.23  9.31067 11.95100  0.17  0.22  0.14  0.10  0.09 DR7 Simbad
+F 2777345 -42.763135 +00.482715 mult 17.94 16.93 16.83 16.84 16.90 18.57330 24.30612  0.21  0.24  0.18  0.12  0.09 DR7 Simbad
+F 2383752 -37.431381 -00.842875 mult 21.33 20.31 20.27 20.30 20.32 13.15213  9.90024  0.25  0.40  0.27  0.20  0.18 DR7 Simbad
+F 5415273 -57.074003 -00.422064 mult 18.34 17.30 17.25 17.30 17.35 14.23765 10.29948  0.16  0.19  0.13  0.10  0.09 DR7 Simbad
+F  713584 -16.915188 +00.737187 mult 19.40 18.37 18.38 18.41 18.48 20.72999 20.92128  0.21  0.26  0.19  0.15  0.12 DR7 Simbad
+F 2298258 -36.580453 +00.002215 mult 20.43 19.49 19.50 19.57 19.62 20.24135 19.23308  0.39  0.49  0.36  0.29  0.24 DR7 Simbad
+F  421829 -12.173045 +00.426865 mult 20.79 19.78 19.84 19.94 20.05 23.13966 25.14084  0.16  0.22  0.17  0.11  0.07 DR7 Simbad
+F  225151 010.458869 -00.877921 mult 17.94 16.84 16.87 16.91 16.98 18.25562 22.35908  0.45  0.52  0.37  0.30  0.25 DR7 Simbad
+F 4064319 005.074867 -00.590467 mult 17.95 16.90 16.90 16.98 17.08 21.84638 28.84696  0.42  0.56  0.41  0.32  0.26 DR7 Simbad
+F 4377712 -50.876368 -01.088706 mult 18.20 17.19 17.10 17.13 17.21 18.08047 24.00952  0.60  0.70  0.50  0.40  0.34 DR7 Simbad
+F 3466895 -46.531706 -00.295154 mult 20.75 19.75 19.73 19.81 19.92 21.52095 29.40172  0.15  0.28  0.17  0.13  0.07 DR7 Simbad
+F  635626 015.536793 -00.854048 mult 21.04 20.14 20.01 19.99 19.99 18.50370 25.39660  0.02  0.22  0.18  0.16  0.27 DR7 Simbad
+F 3482070 -47.757087 -01.185417 mult 17.29 16.28 16.32 16.41 16.52 25.81594 16.93232  0.14  0.16  0.16  0.09  0.06 DR7 Simbad
+F 2211584 -35.050797 +00.696938 mult 20.82 19.89 19.84 19.89 19.95 17.68536 27.28028  0.31  0.25  0.17  0.20  0.02 DR7 Simbad
