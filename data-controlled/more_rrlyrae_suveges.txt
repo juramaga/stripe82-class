@@ -1,80 +1,80 @@
-#  
-#   VizieR Astronomical Server vizier.cfa.harvard.edu
-#    Date: 2017-01-04T17:06:20 [V1.99+ (14-Oct-2013)]
-#   In case of problem, please report to: cds-question@unistra.fr
-# 
-#   
-#Coosys J2000: eq_FK5 J2000 
-#INFO votable-version=1.99+ (14-Oct-2013) 
-#INFO -ref=VIZ586d2b736a7f 
-#INFO -out.max=unlimited 
-#INFO queryParameters=31 
-#-oc.form=sexa
-#-out.max=unlimited
-#-nav=cat:J/MNRAS/424/2528&tab:{J/MNRAS/424/2528/table1}&key:source=J/MNRAS/424/2528/table1&HTTPPRM:&
-#-c.eq=J2000
-#-c.r=  2
-#-c.u=arcmin
-#-c.geom=r
-#-source=J/MNRAS/424/2528/table1
-#-order=I
-#-out=F
-#-out=T
-#-out=ID
-#-out=n_ID
-#-out=RAJ2000
-#-out=DEJ2000
-#-out=Type
-#-out=umag
-#-out=gmag
-#-out=rmag
-#-out=imag
-#-out=zmag
-#-out=Fz1
-#-out=uAmp
-#-out=gAmp
-#-out=rAmp
-#-out=iAmp
-#-out=zAmp
-#-out=DR7
-#DR7=DR7
-#-out=Simbad
-#Simbad=Simbad
-#
+# #  
+# #   VizieR Astronomical Server vizier.cfa.harvard.edu
+# #    Date: 2017-01-04T17:06:20 [V1.99+ (14-Oct-2013)]
+# #   In case of problem, please report to: cds-question@unistra.fr
+# # 
+# #   
+# #Coosys J2000: eq_FK5 J2000 
+# #INFO votable-version=1.99+ (14-Oct-2013) 
+# #INFO -ref=VIZ586d2b736a7f 
+# #INFO -out.max=unlimited 
+# #INFO queryParameters=31 
+# #-oc.form=sexa
+# #-out.max=unlimited
+# #-nav=cat:J/MNRAS/424/2528&tab:{J/MNRAS/424/2528/table1}&key:source=J/MNRAS/424/2528/table1&HTTPPRM:&
+# #-c.eq=J2000
+# #-c.r=  2
+# #-c.u=arcmin
+# #-c.geom=r
+# #-source=J/MNRAS/424/2528/table1
+# #-order=I
+# #-out=F
+# #-out=T
+# #-out=ID
+# #-out=n_ID
+# #-out=RAJ2000
+# #-out=DEJ2000
+# #-out=Type
+# #-out=umag
+# #-out=gmag
+# #-out=rmag
+# #-out=imag
+# #-out=zmag
+# #-out=Fz1
+# #-out=uAmp
+# #-out=gAmp
+# #-out=rAmp
+# #-out=iAmp
+# #-out=zAmp
+# #-out=DR7
+# #DR7=DR7
+# #-out=Simbad
+# #Simbad=Simbad
+# #
 
-#RESOURCE=yCat_74242528
-#Name: J/MNRAS/424/2528
-#Title: RR Lyrae in SDSS Stripe 82 (Suveges+, 2012)
-#Table J_MNRAS_424_2528_table1:
-#Name: J/MNRAS/424/2528/table1
-#Title: RR Lyrae candidates in Stripe 82
-#---Details of Columns:
-    F             (A1)    {\bf F} indicates that a figure exists for this star [ucd=meta.ref.url]
-    T             (A1)    {\bf T} indicates that a best-fitting template exists in table2 [ucd=meta.ref.url]
-    ID            (I7)    Identification number [ucd=meta.id;meta.main]
-    n_ID          (A1)    [*] Multiple peaks (1) [ucd=meta.note]
-    RAJ2000 (deg) (F10.6) [-90/90] Right ascension (J2000) [ucd=pos.eq.ra;meta.main]
-    DEJ2000 (deg) (F10.6) [-1.3/1.3] Declination (J2000) [ucd=pos.eq.dec;meta.main]
-    Type          (A4)    RR Lyrae type (table1) or DSCT (table6) [ucd=meta.note;src.morph.type]
-    umag (mag)    (F5.2)  Mean u magnitude corrected for the interstellar medium extinction [ucd=phot.mag;em.opt.U]
-    gmag (mag)    (F5.2)  Mean g magnitude corrected for the interstellar medium extinction [ucd=phot.mag;em.opt.B]
-    rmag (mag)    (F5.2)  Mean r magnitude corrected for the interstellar medium extinction [ucd=phot.mag;em.opt.R]
-    imag (mag)    (F5.2)  Mean i magnitude corrected for the interstellar medium extinction [ucd=phot.mag;em.opt.I]
-    zmag (mag)    (F5.2)  Mean z magnitude corrected for the interstellar medium extinction [ucd=phot.mag;em.opt.I]
-    Fz1 (d-1)     (F8.5)  Pulsation frequency determined from generalized least-squares period search on PC1 (first direction of the principal component analysis) [ucd=em.freq;src.var]
-    uAmp (mag)    (F5.2)  Amplitude in u-band [ucd=src.var.amplitude]
-    gAmp (mag)    (F5.2)  Amplitude in g-band [ucd=src.var.amplitude]
-    rAmp (mag)    (F5.2)  Amplitude in r-band [ucd=src.var.amplitude]
-    iAmp (mag)    (F5.2)  Amplitude in i-band [ucd=src.var.amplitude]
-    zAmp (mag)    (F5.2)  Amplitude in z-band [ucd=src.var.amplitude]
-    DR7           (A3)    Display the SDSS-DR7 photometric catalog within 3" (Cat. II/294) [ucd=meta.ref.url]
-    Simbad        (a6)    ask the {\bf\fg{FireBrick}Simbad} data-base about this object [ucd=meta.ref.url]
-- - ------- - ---------- ---------- ---- ----- ----- ----- ----- ----- -------- ----- ----- ----- ----- ----- --- ------
-            n                                                                                                           
-            _                                                                                                           
-            I RAJ        DEJ             umag  gmag  rmag  imag  zmag  F        uAmp  gAmp  rAmp  iAmp  zAmp            
-F T ID      D 2000 (deg) 2000 (deg) Type (mag) (mag) (mag) (mag) (mag) z1 (d-1) (mag) (mag) (mag) (mag) (mag) DR7 Simbad
-- - ------- - ---------- ---------- ---- ----- ----- ----- ----- ----- -------- ----- ----- ----- ----- ----- --- ------
+# #RESOURCE=yCat_74242528
+# #Name: J/MNRAS/424/2528
+# #Title: RR Lyrae in SDSS Stripe 82 (Suveges+, 2012)
+# #Table J_MNRAS_424_2528_table1:
+# #Name: J/MNRAS/424/2528/table1
+# #Title: RR Lyrae candidates in Stripe 82
+# #---Details of Columns:
+#     F             (A1)    {\bf F} indicates that a figure exists for this star [ucd=meta.ref.url]
+#     T             (A1)    {\bf T} indicates that a best-fitting template exists in table2 [ucd=meta.ref.url]
+#     ID            (I7)    Identification number [ucd=meta.id;meta.main]
+#     n_ID          (A1)    [*] Multiple peaks (1) [ucd=meta.note]
+#     RAJ2000 (deg) (F10.6) [-90/90] Right ascension (J2000) [ucd=pos.eq.ra;meta.main]
+#     DEJ2000 (deg) (F10.6) [-1.3/1.3] Declination (J2000) [ucd=pos.eq.dec;meta.main]
+#     Type          (A4)    RR Lyrae type (table1) or DSCT (table6) [ucd=meta.note;src.morph.type]
+#     umag (mag)    (F5.2)  Mean u magnitude corrected for the interstellar medium extinction [ucd=phot.mag;em.opt.U]
+#     gmag (mag)    (F5.2)  Mean g magnitude corrected for the interstellar medium extinction [ucd=phot.mag;em.opt.B]
+#     rmag (mag)    (F5.2)  Mean r magnitude corrected for the interstellar medium extinction [ucd=phot.mag;em.opt.R]
+#     imag (mag)    (F5.2)  Mean i magnitude corrected for the interstellar medium extinction [ucd=phot.mag;em.opt.I]
+#     zmag (mag)    (F5.2)  Mean z magnitude corrected for the interstellar medium extinction [ucd=phot.mag;em.opt.I]
+#     Fz1 (d-1)     (F8.5)  Pulsation frequency determined from generalized least-squares period search on PC1 (first direction of the principal component analysis) [ucd=em.freq;src.var]
+#     uAmp (mag)    (F5.2)  Amplitude in u-band [ucd=src.var.amplitude]
+#     gAmp (mag)    (F5.2)  Amplitude in g-band [ucd=src.var.amplitude]
+#     rAmp (mag)    (F5.2)  Amplitude in r-band [ucd=src.var.amplitude]
+#     iAmp (mag)    (F5.2)  Amplitude in i-band [ucd=src.var.amplitude]
+#     zAmp (mag)    (F5.2)  Amplitude in z-band [ucd=src.var.amplitude]
+#     DR7           (A3)    Display the SDSS-DR7 photometric catalog within 3" (Cat. II/294) [ucd=meta.ref.url]
+#     Simbad        (a6)    ask the {\bf\fg{FireBrick}Simbad} data-base about this object [ucd=meta.ref.url]
+# - - ------- - ---------- ---------- ---- ----- ----- ----- ----- ----- -------- ----- ----- ----- ----- ----- --- ------
+#             n                                                                                                           
+#             _                                                                                                           
+#             I RAJ        DEJ             umag  gmag  rmag  imag  zmag  F        uAmp  gAmp  rAmp  iAmp  zAmp            
+# F T ID      D 2000 (deg) 2000 (deg) Type (mag) (mag) (mag) (mag) (mag) z1 (d-1) (mag) (mag) (mag) (mag) (mag) DR7 Simbad
+# - - ------- - ---------- ---------- ---- ----- ----- ----- ----- ----- -------- ----- ----- ----- ----- ----- --- ------
 F T  510582   348.098332 -00.947130 RRAB 20.22 19.14 18.90 18.79 18.79  1.24630  0.20  0.19  0.13  0.11  0.09 DR7 Simbad
 F T  651051   019.017164 +01.262702 RRAB 18.27 17.07 16.80 16.72 16.69  1.77625  1.03  1.09  0.76  0.62  0.56 DR7 Simbad
 F T 1013845   023.603725 -00.592160 RRAB 17.32 16.11 15.87 15.77 15.77  1.36722  0.83  0.88  0.62  0.53  0.44 DR7 Simbad
