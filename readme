@@ -9,9 +9,17 @@ python download.py
 python merge.py
 ## view catalog
 emacs catalog.txt
-## create challenge from catalog.txt
+## create challenge from catalog.txt (still testing)
 python challenge.py
 
+====== MAKING CHANGES TO THE REPO ======
+Collaborators on the project will not be able to use any code which
+relies on local changes (changes you have not pushed to the repo). To
+ensure that the code running on your machine will run identically for
+collaborators it is strongly recommended that after making and pushing
+changes you DELETE your local copy of the repo, clone the repo from
+github, and then rerun everything. The results are what any collaborator
+will see (up to differences in python version).
 
 ====== TODO / QUESTIONS ======
 - cannot find any articles on cepheids or miras in sdss stripe 82
