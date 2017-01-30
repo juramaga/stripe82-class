@@ -6,7 +6,7 @@ import os
 import numpy as np
 import pandas as pd
 
-## TODO: set random seed somewhere
+np.random.seed(2017)
 
 d = "challenge" ## name of folder to put challenge files
 f = "challenge-docs" ## name of folder with challenge readme, example, etc

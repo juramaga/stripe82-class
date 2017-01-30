@@ -9,11 +9,25 @@ python download.py
 python merge.py
 ## view catalog
 emacs catalog.txt
-## create challenge from catalog.txt (still testing)
+## create challenge from catalog.txt
 python challenge.py
 ## the folder challenge contains the data challenge,
 ## see readme there for more instructions
 
+
+====== STUDYING CLASSIFICATION OF VARIABLE STARS ======
+There are two primary ways to being to classify / cluster the stars in
+SDSS Stripe 82:
+     1) catalog.txt: the ids in this file refer to the light curves in
+        data/AllLCs. you can visualize the light curves, check that
+	the purported classifications make sense, derive features, etc.
+     2) challenge/ folder: develop a classifier using the
+        challenge/train light curves and classifications in
+	challenge/train_classifications.txt. you can predict the classes
+	for the light curves in challenge/test and then compare your
+	predictions to test_classification.txt. see challenge/readme and
+	challenge.py for more information on how the training / test
+	sets were chosen
 
 ====== MAKING CHANGES TO THE REPO ======
 You are encouraged to develop the code base of this project and
@@ -22,11 +36,10 @@ able to use any code which relies on local changes
 (changes you have not pushed to the repo). To ensure that the
 code running on your machine will run identically for
 collaborators it is strongly recommended that after making and pushing
-changes you DELETE your local copy of the repo, clone the repo from
-github, and then rerun everything. The results are what any collaborator
-will see (up to differences in python version).
+changes you clone the repo from github and then rerun everything.
+The results are what any collaborator will see.
 
-====== CURRENT DATA SOURCES ======
+====== SOME CURRENT DATA SOURCES ======
 
 = SDSS STRIPE 82 VARIABLE SOURCE CATALOG (stripe82candidateVar_v1.1.dat)
   - http://www.astro.washington.edu/users/ivezic/sdss/catalogs/S82variables.html
