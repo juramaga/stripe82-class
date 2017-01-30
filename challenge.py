@@ -75,5 +75,5 @@ data_train.to_csv("challenge/train_classifications.txt",index=False)
 data_test.to_csv("test_classifications.txt",index=False) ## not written to challenge folder
 
 
-import shutil
-shutil.make_archive("challenge.zip","zip","challenge")
+
+##shutil.make_archive(d,"gztar",d)

@@ -11,6 +11,9 @@ python merge.py
 emacs catalog.txt
 ## create challenge from catalog.txt (still testing)
 python challenge.py
+## the folder challenge contains the data challenge,
+## see readme there for more instructions
+
 
 ====== MAKING CHANGES TO THE REPO ======
 You are encouraged to develop the code base of this project and
