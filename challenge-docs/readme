@@ -1,1 +1,19 @@
-== this file will describe the data challenge for the user
+== description of data challenge files
+
+== files
+train_classification.txt
+ - classifications for all files in train, the first column "ID"
+   gives the filename (without the "LC_" and ".dat"). the last column
+   "cl" gives the classification of the source
+
+== folders
+train/
+ - contains training light curves
+test/
+ - contains test light curves
+
+== task
+ - produce classifications for the test data. the test data contains
+   light curves of all classes in the training data plus an unknown class.
+   output your results in a csv with the first column the source ID and
+   the second column the predicted classification
