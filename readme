@@ -1,6 +1,7 @@
-== contains SDSS classification compiled from various
-== sources in the literature
-== mostly tested on python2.7
+== merges SDSS Stripe 82 source classifications
+== from various literature sources. creates a
+== data challenge from resulting catalog
+== mostly tested on python2.7, requires pandas
 
 ====== USAGE ======
 ## get data
