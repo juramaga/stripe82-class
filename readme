@@ -16,7 +16,7 @@ python challenge.py
 
 
 ====== STUDYING CLASSIFICATION OF VARIABLE STARS ======
-There are two primary ways to being to classify / cluster the stars in
+There are two primary ways to begin classifying / clustering sources in
 SDSS Stripe 82:
      1) catalog.txt: the ids in this file refer to the light curves in
         data/AllLCs. you can visualize the light curves, check that
