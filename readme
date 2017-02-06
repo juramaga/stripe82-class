@@ -40,6 +40,14 @@ collaborators it is strongly recommended that after making and pushing
 changes you clone the repo from github and then rerun everything.
 The results are what any collaborator will see.
 
+
+====== DATA SOURCES TO CHECK ======
+The following articles contain classifications of some SDSS Stripe 82 sources.
+We should make sure we have all of these in our catalog and then move these
+references to SOME CURRENT DATA SOURCES section.
+
+- Quasar Classification, Peters et al. http://iopscience.iop.org/article/10.1088/0004-637X/811/2/95
+
 ====== SOME CURRENT DATA SOURCES ======
 
 = SDSS STRIPE 82 VARIABLE SOURCE CATALOG (stripe82candidateVar_v1.1.dat)
