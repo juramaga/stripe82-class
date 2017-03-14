@@ -1,0 +1,46 @@
+import sys
+import os
+import pandas as pd
+import numpy as np
+from gatspy import periodic
+
+#Creating the labeled csv files
+
+a = 'folder' #folder containing lightcurve data in '.dat' format
+for filename in os.listdir(a):
+       infilename = os.path.join(a,filename)
+       if not os.path.isfile(infilename): continue
+       oldbase = os.path.splitext(filename)
+       newname = infilename.replace('.dat', '.csv')
+       output = os.rename(infilename, newname)
+
+
+import glob
+files = glob.glob('folder/*.csv')
+
+for file in files:
+    for line in fileinput.input(file, inplace=True):
+        if fileinput.isfirstline():
+            print 'Time Band Mag Error'
+        print line
+
+#Period estimation for a single lightcurve file 
+df = pd.read_csv('LC_74.csv',  header=0,sep=' ') #Load your light curve file as a csv
+df = df[df['Mag'] >= 0] #Cleanign the data
+df
+
+
+time = map(float,df.ix[:,0].values) 
+mags = map(float,df.ix[:,2].values)
+dmags = map(float,df.ix[:,3].values)
+filters = df.ix[:,1].values
+
+
+#sys.stdout = open(os.devnull,"w") #To prevent printing intermediate results by in-built functions
+ls = periodic.LombScargleMultiband(fit_period=True); #For finding periodicity in irregularly sampled multiband data
+ls.optimizer.period_range = (0.2, 1.0)
+ls.fit(time,mags,dmags,filters)
+period = ls.best_period
+#sys.stdout = sys.__stdout__
+print period 
+
