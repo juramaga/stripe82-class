@@ -17,8 +17,10 @@ for filename in os.listdir(a):
 
 #Period estimation for a single lightcurve file 
 df = pd.read_csv('LC_13350.csv',  header=None,sep=' ') #Load your light curve file as a csv
-df = df[df.ix[:,2] >= 0] #Cleaning the data
-df
+#Cleaning the data
+df = df[df.ix[:,2] >= 0] 
+df = df[~df.ix[:,0].str.contains("#")]
+df.head()
 
 
 time = map(float,df.ix[:,0].values) 
