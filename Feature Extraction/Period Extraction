@@ -15,18 +15,9 @@ for filename in os.listdir(a):
        output = os.rename(infilename, newname)
 
 
-import glob
-files = glob.glob('folder/*.csv')
-
-for file in files:
-    for line in fileinput.input(file, inplace=True):
-        if fileinput.isfirstline():
-            print 'Time Band Mag Error'
-        print line
-
 #Period estimation for a single lightcurve file 
-df = pd.read_csv('LC_74.csv',  header=0,sep=' ') #Load your light curve file as a csv
-df = df[df['Mag'] >= 0] #Cleanign the data
+df = pd.read_csv('LC_13350.csv',  header=None,sep=' ') #Load your light curve file as a csv
+df = df[df.ix[:,2] >= 0] #Cleaning the data
 df
 
 
@@ -44,3 +35,18 @@ period = ls.best_period
 #sys.stdout = sys.__stdout__
 print period 
 
+#Plotting the folded light curves for each band
+fig = plt.figure(figsize=(14, 5))
+gs = plt.GridSpec(5, 2, left=0.10, right=0.95, bottom=0.15,
+                  wspace=0.3, hspace=0.6)
+ax = [fig.add_subplot(gs[:, 0])]
+
+for band, mask in zip('ugriz', masks):
+    ax[0].errorbar(foldTimes[mask], mags[mask], yerr=dmags[mask],fmt='.',label=band)
+
+ax[0].set_ylim(20, 17)
+ax[0].legend(loc='lower right', fontsize=8, ncol=3)
+ax[0].set_title('Folded Data', fontsize=12)
+ax[0].set_xlabel('phase')
+ax[0].set_ylabel('magnitude')
+plt.show()
