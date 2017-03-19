@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 from gatspy import periodic
 
 #Converting to csv format
-
 a = 'folder' #folder containing lightcurve data in '.dat' format
 for filename in os.listdir(a):
        infilename = os.path.join(a,filename)
@@ -23,6 +22,7 @@ df = df[~df.ix[:,0].str.contains("#")]
 df.columns = ['Time','Band','Magnitude','Error'] #Adding column names
 df.head()
 
+#Color Extraction
 grouped = df.groupby('Band')
 grouped.size()
 df2 = grouped.mean() #mean values of band magnitudes and their errors
