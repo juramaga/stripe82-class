@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from gatspy import periodic
 
 #Converting to csv format
-a = 'folder' #folder containing lightcurve data in '.dat' format
+a = 'stripe82-class/data/AllLCs' #path to the folder containing lightcurve data in '.dat' format
 for filename in os.listdir(a):
        infilename = os.path.join(a,filename)
        if not os.path.isfile(infilename): continue
@@ -15,7 +15,7 @@ for filename in os.listdir(a):
        output = os.rename(infilename, newname)
 
 
-df = pd.read_csv('LC_13350.csv',  header=None,sep=' ') #Load your light curve file as a csv
+df = pd.read_csv('stripe82-class/data/AllLCs/LC_13350.csv',  header=None,sep=' ') #Load your light curve file as a csv
 #Cleaning the data
 df = df[df.ix[:,2] >= 0] 
 df = df[~df.ix[:,0].str.contains("#")]
