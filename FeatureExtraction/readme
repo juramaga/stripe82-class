@@ -1,0 +1,9 @@
+====== PURPOSE ======
+== Generates features for SDSS Stripe 82 light curves
+The file ending in '.py' is the python script for extracting various features (Periods, Colors etc.), which can be directly run from the ‘FeatureExtraction’ folder of the master directory (stripe82-class-master)
+The Jupyter notebook files (.ipynb) are intended to display the features extracted. 
+
+====== USAGE ======
+cd stripe82-class-master
+cd FeatureExtraction
+python PeriodColorExtraction.py
