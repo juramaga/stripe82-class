@@ -59,10 +59,11 @@ plt.show()
 
 
 #Period estimation for a single lightcurve file 
-time = map(float,df.ix[:,0].values) 
-mags = map(float,df.ix[:,2].values)
-dmags = map(float,df.ix[:,3].values)
-filters = df.ix[:,1].values
+time = np.array(map(float,df.ix[:,0].values))
+mags = np.array(map(float,df.ix[:,2].values))
+dmags = np.array(map(float,df.ix[:,3].values))
+filters = np.array(df.ix[:,1].values)
+masks = [(filters == band) for band in 'ugriz']
 
 
 #sys.stdout = open(os.devnull,"w") #To prevent printing intermediate results by in-built functions
@@ -72,6 +73,11 @@ ls.fit(time,mags,dmags,filters)
 period = ls.best_period
 #sys.stdout = sys.__stdout__
 print period 
+
+#Calculating the phase
+foldTimes = time/period
+foldTimes = foldTimes % 1
+foldTimes = np.array(foldTimes)
 
 #Plotting the folded light curves for each band
 fig = plt.figure(figsize=(14, 5))
