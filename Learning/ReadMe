@@ -7,3 +7,6 @@ The Jupyter notebook files (.ipynb) are intended to display the results.
 cd stripe82-class-master
 cd Learning
 python Clustering.py
+
+====== REFERENCES ======
+SciPy Hierarchical Clustering and Dendrogram Tutorial, Jörn Hees
