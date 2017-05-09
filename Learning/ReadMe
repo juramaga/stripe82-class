@@ -1,0 +1,9 @@
+======= PURPOSE ======
+== Generates clusters/classes in the SDSS Stripe-82 dataset
+The file ending in '.py' is the python script for performing clustering/classification, which can be directly run from the ‘Learning’ folder of the master directory (stripe82-class-master)
+The Jupyter notebook files (.ipynb) are intended to display the results. 
+
+====== USAGE ======
+cd stripe82-class-master
+cd Learning
+python Clustering.py
