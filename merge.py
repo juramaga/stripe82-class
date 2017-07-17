@@ -192,6 +192,7 @@ print "standardizing classification names . . ."
 
 data['temp_cl'] = ''
 data['temp_cl'].loc[data['cl']=='unknown']='unknown'
+data['temp_cl'].loc[data['cl']=='QSO']='QSO'
 data['temp_cl'].loc[data['cl']=='ew']='ew' #W Ursae Majoris-type eclipsing variables
 data['temp_cl'].loc[data['cl']=='ea']='ea' #β Persei-type (Algol) eclipsing systems
 data['temp_cl'].loc[data['cl']=='eb']='eb' #β Lyrae-type eclipsing systems
