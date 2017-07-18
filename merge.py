@@ -69,8 +69,8 @@ del data['v_mag']
 data['temp_cl'] = ''
 data['temp_cl'].loc[data['cl']=='unknown']='unknown'
 data['temp_cl'].loc[data['cl']==1]='ew' #W Ursae Majoris-type eclipsing variables
-data['temp_cl'].loc[data['cl']==2]='ea' #β Persei-type (Algol) eclipsing systems
-data['temp_cl'].loc[data['cl']==3]='eb' #β Lyrae-type eclipsing systems
+data['temp_cl'].loc[data['cl']==2]='ea' #beta Persei-type (Algol) eclipsing systems
+data['temp_cl'].loc[data['cl']==3]='eb' #beta Lyrae-type eclipsing systems
 data['temp_cl'].loc[data['cl']==4]='rr_ab' #RR Lyrae variables with asymmetric light curves
 data['temp_cl'].loc[data['cl']==5]='rr_c' #RR Lyrae variables with nearly symmetric
 data['temp_cl'].loc[data['cl']==6]='rr_d' #Double-mode RR Lyrae stars which pulsate...
@@ -78,7 +78,7 @@ data['temp_cl'].loc[data['cl']==7]='bl' #RR Lyrae stars showing the Blazhko effe
 data['temp_cl'].loc[data['cl']==8]='rs' #non-eclipsing RS CVn stars
 data['temp_cl'].loc[data['cl']==9]='acep' #Anomalous Cepheids
 data['temp_cl'].loc[data['cl']==10]='cep-ii' ####need to confirm which star this is...
-data['temp_cl'].loc[data['cl']==11]='hads' #High Amplitude δ Scuti stars
+data['temp_cl'].loc[data['cl']==11]='hads' #High Amplitude delta Scuti stars
 data['temp_cl'].loc[data['cl']==12]='lads'
 data['temp_cl'].loc[data['cl']==13]='lpv' #Long Period Variables 
 data['temp_cl'].loc[data['cl']==14]='ell' #ellipsoidal binary system
