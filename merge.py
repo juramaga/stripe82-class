@@ -192,19 +192,19 @@ print "standardizing classification names . . ."
 
 data['temp_cl'] = ''
 data['temp_cl'].loc[data['cl']=='unknown']='unknown'
-data['temp_cl'].loc[data['cl']=='QSO']='QSO'
-data['temp_cl'].loc[data['cl']=='del_scu']='del_scu'
-data['temp_cl'].loc[data['cl']=='EC']='EC'
-data['temp_cl'].loc[data['cl']=='ED']='ED'
-data['temp_cl'].loc[data['cl']=='ESD']='ESD'
+data['temp_cl'].loc[data['cl']=='QSO']='QSO' #variable quasars
+data['temp_cl'].loc[data['cl']=='del_scu']='del_scu' #delta scuti variables
+data['temp_cl'].loc[data['cl']=='EC']='EC' #Contact binaries in ASAS-3
+data['temp_cl'].loc[data['cl']=='ED']='ED' #Detached eclipsing binaries
+data['temp_cl'].loc[data['cl']=='ESD']='ESD' #Semi-detached eclipsing binaries
 data['temp_cl'].loc[data['cl']=='EC/ESD']='EC/ESD'
 data['temp_cl'].loc[data['cl']=='ESD/ED']='ESD/ED'
 data['temp_cl'].loc[data['cl']=='EC*']='EC*'
 data['temp_cl'].loc[data['cl']=='ED*']='ED*'
 data['temp_cl'].loc[data['cl']=='mult']='mult'
 data['temp_cl'].loc[data['cl']=='ew']='ew' #W Ursae Majoris-type eclipsing variables
-data['temp_cl'].loc[data['cl']=='ea']='ea' #β Persei-type (Algol) eclipsing systems
-data['temp_cl'].loc[data['cl']=='eb']='eb' #β Lyrae-type eclipsing systems
+data['temp_cl'].loc[data['cl']=='ea']='ea' #beta Persei-type (Algol) eclipsing systems
+data['temp_cl'].loc[data['cl']=='eb']='eb' #beta Lyrae-type eclipsing systems
 data['temp_cl'].loc[data['cl']=='rr_ab']='rr_ab' #RR Lyrae variables with asymmetric light curves
 data['temp_cl'].loc[data['cl']=='rr_c']='rr_c' #RR Lyrae variables with nearly symmetric
 data['temp_cl'].loc[data['cl']=='rr_d']='rr_d' #Double-mode RR Lyrae stars which pulsate...
@@ -212,17 +212,17 @@ data['temp_cl'].loc[data['cl']=='bl']='bl' #RR Lyrae stars showing the Blazhko e
 data['temp_cl'].loc[data['cl']=='rs']='rs' #non-eclipsing RS CVn stars
 data['temp_cl'].loc[data['cl']=='acep']='acep' #Anomalous Cepheids
 data['temp_cl'].loc[data['cl']=='cep-ii']='cep-ii' ####need to confirm which star this is...
-data['temp_cl'].loc[data['cl']=='hads']='hads' #High Amplitude δ Scuti stars
-data['temp_cl'].loc[data['cl']=='lads']='lads'
+data['temp_cl'].loc[data['cl']=='hads']='hads' #High Amplitude delta Scuti stars
+data['temp_cl'].loc[data['cl']=='lads']='lads' #low-amplitude delta Scuti stars
 data['temp_cl'].loc[data['cl']=='lpv']='lpv' #Long Period Variables 
 data['temp_cl'].loc[data['cl']=='ell']='ell' #ellipsoidal binary system
-data['temp_cl'].loc[data['cl']=='hump']='hump' ####????
+data['temp_cl'].loc[data['cl']=='hump']='hump' #LPV Humps
 data['temp_cl'].loc[data['cl']=='pceb']='pceb' #post common envelope binary planetary system
-data['temp_cl'].loc[data['cl']=='ea_up']='ea_up' ####????
-data['temp_cl'].loc[data['cl']=='RRAB']='rr_ab'
+data['temp_cl'].loc[data['cl']=='ea_up']='ea_up' 
+data['temp_cl'].loc[data['cl']=='RRAB']='rr_ab' #RR Lyrae variables with asymmetric light curves
 data['temp_cl'].loc[data['cl']=='RRmf']='rr_mf'
-data['temp_cl'].loc[data['cl']=='RRC']='rr_c'
-data['temp_cl'].loc[data['cl']=='RRdm']='rr_dm'
+data['temp_cl'].loc[data['cl']=='RRC']='rr_c' #RR Lyrae variables with nearly symmetric
+data['temp_cl'].loc[data['cl']=='RRdm']='rr_dm' #Detached main-sequence systems?
 data['temp_cl'].loc[data['cl']=='RRu']='rr_u'
 
 data['cl'] = data['temp_cl']
