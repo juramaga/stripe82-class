@@ -46,7 +46,7 @@ data['v'] = data['g'] - 0.5784*data['gr'] - 0.0038
 #compare the two
 idx, d2d, d3d = c1.match_to_catalog_sky(catalog)
 #eliminates all matches that have too big of a separation
-idy =  np.where((d2d.arcsec) < 1.5) ####make error check####
+idy =  np.where((d2d.arcsec) < 3) 
 
 #this was included in the code
 #I merely modified it for the catalina catalog
